@@ -16,6 +16,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
+    
+    // Make ViewController class the delegate of the text field
+    upperTextField.delegate = self
   }
 
   override func didReceiveMemoryWarning() {
