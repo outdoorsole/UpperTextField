@@ -33,6 +33,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     // relinquish its status as the first responder
     textField.resignFirstResponder()
+    if textField == upperTextField {
+      print("upperTextfield called textFieldShouldReturn")
+    }
+    if textField == fiveTextField {
+      print("fiveTextfield called textFieldShouldReturn")
+    }
     
     return true
   }
