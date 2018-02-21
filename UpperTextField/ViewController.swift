@@ -12,6 +12,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
   
   // MARK:- Outlet
   @IBOutlet weak var upperTextField: UITextField!
+  @IBOutlet weak var fiveTextField: UITextField!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -19,6 +20,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     // Make ViewController class the delegate of the text field
     upperTextField.delegate = self
+    fiveTextField.delegate = self
   }
 
   override func didReceiveMemoryWarning() {
