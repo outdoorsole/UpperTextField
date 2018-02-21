@@ -56,6 +56,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
       }
     }
+    
+    if textField == fiveTextField {
+      print("This is range: \(range.location)")
+      if string == "" || range.location < 5 {
+        allowChange = true
+      } else {
+        allowChange = false
+      }
+    }
+    
+    
     // returns true if the specified text should be changed; otherwise, false to keep the old text
     return allowChange
   }
