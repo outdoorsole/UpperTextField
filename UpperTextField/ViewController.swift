@@ -19,6 +19,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
+  
+  // MARK:- Protocol Method
+  // 1) Asks the delegate if the text field should process the pressing of the return button. Text field calls this method when the user taps the return button. Returns true if the text field should its default behavior for the return button; otherwise return false
+  func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+    // relinquish its status as the first responder
+    resignFirstResponder()
+    
+    return true
+  }
 
 }
 
