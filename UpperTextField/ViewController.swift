@@ -41,7 +41,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     print("shouldChangeCharactersIn called with \(string)")
     
     // returns true if the specified text should be changed; otherwise, false to keep the old text
-    return true
+    return false
   }
   
 }
