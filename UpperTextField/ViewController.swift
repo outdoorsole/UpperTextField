@@ -22,11 +22,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     upperTextField.delegate = self
     fiveTextField.delegate = self
   }
-
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
   
   // MARK:- Protocol Methods
   // 1) Asks the delegate if the text field should process the pressing of the return button. Text field calls this method when the user taps the return button. Returns true if the text field should its default behavior for the return button; otherwise return false
