@@ -26,7 +26,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     // Dispose of any resources that can be recreated.
   }
   
-  // MARK:- Protocol Method
+  // MARK:- Protocol Methods
   // 1) Asks the delegate if the text field should process the pressing of the return button. Text field calls this method when the user taps the return button. Returns true if the text field should its default behavior for the return button; otherwise return false
   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
     // relinquish its status as the first responder
@@ -34,6 +34,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     return true
   }
-
+  
+  // 2) Asks the delegate if the specified text should be changed
+  func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    // anytime a character is entered in the text field, this method is called
+    print("shouldChangeCharactersIn called with \(string)")
+    
+    // returns true if the specified text should be changed; otherwise, false to keep the old text
+    return true
+  }
+  
 }
-
