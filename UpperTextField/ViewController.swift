@@ -42,19 +42,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
   func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
     // anytime a character is entered in the text field, this method is called
     print("shouldChangeCharactersIn called with \(string)")
-    
     var allowChange = true
     
-    if string == "" {
-      allowChange = true
-    } else {
-      if textField.text != nil {
-        // change the characters to uppercase
-        textField.text! += string.uppercased()
-        allowChange = false
+    if textField == upperTextField {
+    
+      if string == "" {
+        allowChange = true
+      } else {
+        if textField.text != nil {
+          // change the characters to uppercase
+          textField.text! += string.uppercased()
+          allowChange = false
+        }
       }
     }
-    
     // returns true if the specified text should be changed; otherwise, false to keep the old text
     return allowChange
   }
